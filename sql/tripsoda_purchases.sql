@@ -1,0 +1,65 @@
+-- MySQL dump 10.13  Distrib 8.0.21, for Win64 (x86_64)
+--
+-- Host: 127.0.0.1    Database: tripsoda
+-- ------------------------------------------------------
+-- Server version	8.0.21
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `purchases`
+--
+
+DROP TABLE IF EXISTS `purchases`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `purchases` (
+  `idx` int NOT NULL AUTO_INCREMENT,
+  `tourtype` varchar(1) NOT NULL,
+  `touridx` int NOT NULL,
+  `tourdays` int NOT NULL,
+  `tourstartday` varchar(50) NOT NULL,
+  `tourendday` varchar(50) DEFAULT NULL,
+  `tourmember` int DEFAULT NULL,
+  `price` int DEFAULT NULL,
+  `tourstarttime` varchar(50) DEFAULT NULL,
+  `useridx` varchar(50) DEFAULT NULL,
+  `purchasecode` varchar(50) DEFAULT NULL,
+  `regdate` datetime DEFAULT NULL,
+  `reguser` varchar(50) NOT NULL,
+  `moddate` datetime DEFAULT NULL,
+  `moduser` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`idx`),
+  UNIQUE KEY `idx` (`idx`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `purchases`
+--
+
+LOCK TABLES `purchases` WRITE;
+/*!40000 ALTER TABLE `purchases` DISABLE KEYS */;
+INSERT INTO `purchases` VALUES (1,'E',11,11,'2020-11-17T15:00:00.000Z','',1,11,'',NULL,NULL,'2020-11-14 15:12:03','테스트','2020-11-14 15:12:03','테스트'),(2,'E',11,11,'2001-01-16T15:00:00.000Z','',1,11,'2020-11-14T06:00:00.261Z',NULL,NULL,'2020-11-14 15:19:07','테스트','2020-11-14 15:19:07','테스트'),(3,'E',111,111,'2011-01-13T15:00:00.000Z','',1,1111,'2020-11-14T08:15:00.654Z',NULL,NULL,'2020-11-14 15:23:22','테스트','2020-11-14 15:23:22','테스트'),(4,'E',1,11,'2001-01-17T15:00:00.000Z','',1,11111,'2020-11-14T07:00:00.317Z',NULL,NULL,'2020-11-14 15:36:20','테스트','2020-11-14 15:36:20','테스트'),(5,'E',1,11,'2020-11-09T15:00:00.000Z','2011-01-04T15:00:00.000Z',11,1321,'2020-11-14T07:00:00.669Z',NULL,NULL,'2020-11-14 15:39:46','테스트','2020-11-14 15:39:46','테스트'),(6,'E',111,111,'2020-11-17T15:00:00.000Z','',1,1111,'',NULL,NULL,'2020-11-14 16:18:32','테스트','2020-11-14 16:18:32','테스트'),(7,'E',11,1,'2001-01-09T15:00:00.000Z','',1,111,'',NULL,NULL,'2020-11-14 16:24:32','테스트','2020-11-14 16:24:32','테스트');
+/*!40000 ALTER TABLE `purchases` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2020-11-21 19:50:15

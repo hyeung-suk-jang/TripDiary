@@ -1,0 +1,48 @@
+@import "../../styles/Common.scss";
+
+.modalNumRange {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .modalNumRange__title {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 15px;
+        border-bottom: 1px solid $line;
+    }
+    .modalNumRange__body {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 180px;
+
+        .modalNumRange__inputbox {
+            width: 100%;
+
+            input {
+                width: 100%;
+            }
+        }
+
+        .modalNumRange__timeSelect {
+            width: 100%;
+        }
+    }
+
+    .modalNumRange__footer {
+        margin-bottom: 10px;
+        width: 100%;
+        height: 180px;
+        line-height: 180px;
+        text-align: center;
+        background: $line;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    .modalNumRange__error {
+        color: red;
+        font-size: 0.9rem;
+    }
+}
